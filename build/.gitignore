@@ -11,3 +11,4 @@ cmake_install.cmake
 *.dir/*
 *.sln
 install_manifest.txt
+x64/*

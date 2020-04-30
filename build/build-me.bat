@@ -2,21 +2,21 @@
 @set DOINST=1
 @set TMPPRJ=dirent
 @set TMPSRC=..
-@set TMPINST=..\..\software
+@set TMPINST=D:\Projects\3rdParty.x64
 @if NOT EXIST %TMPSRC%\nul goto NOSRC
 @set TMPLOG=bldlog-1.txt
 
 @REM ====== rename the log ================
-@if NOT EXIST %TMPLOG% goto DNLOG
-@if NOT EXIST %TMPLOG%.old goto RENOLD
-@if EXIST %TMPLOG%.bak (
-@del %TMPLOG%.bak
-)
-@ren %TMPLOG% %TMPLOG%.bak
-@goto DNLOG
-:RENOLD
-@ren %TMPLOG% %TMPLOG%.old
-:DNLOG
+@REM if NOT EXIST %TMPLOG% goto DNLOG
+@REM if NOT EXIST %TMPLOG%.old goto RENOLD
+@REM if EXIST %TMPLOG%.bak (
+@REM del %TMPLOG%.bak
+@REM )
+@REM ren %TMPLOG% %TMPLOG%.bak
+@REM goto DNLOG
+@REM :RENOLD
+@REM ren %TMPLOG% %TMPLOG%.old
+@REM :DNLOG
 @REM =====================================
 
 @set TMPOPTS=
@@ -25,7 +25,7 @@
 @call chkmsvc %TMPPRJ%
 @REM call setupqt32
 
-@echo Begin %TIME% > %TMPLOG%
+@echo Begin %DATE% %TIME% > %TMPLOG%
 
 @if EXIST build-cmake.bat (
 @call build-cmake >>%TMPLOG% 2>&1
