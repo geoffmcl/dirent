@@ -1,6 +1,5 @@
 *.vcxproj
 *.filters
-*.user
 CMakeCache.txt
 CMakeFiles/*
 Debug/*
@@ -10,6 +9,4 @@ bldlog-1.txt
 cmake_install.cmake
 *.dir/*
 *.sln
-install_manifest.txt
-x64/*
-.vs/*
+install_manifest*.txt
